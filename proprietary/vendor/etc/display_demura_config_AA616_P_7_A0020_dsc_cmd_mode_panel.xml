@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+/***************************************************************
+** Copyright (C), 2025, OPLUS Mobile Comm Corp., Ltd
+**
+** File : display_demura_config_xxx.xml
+** Description : APDMR Feature Config
+** Version : 1.0
+** Date : 2025/04/21
+** Author : Display
+******************************************************************/
+-->
+
+<root>
+    <!-- must update version when you commit this file -->
+    <version>20251204</version>
+
+    <panel_id>
+        <id1 id="9e">
+            <id2 id="00">t0</id2>
+            <id2 id="01">evt</id2>
+            <id2 id="02">dvt</id2>
+            <id2 id="03">pvt</id2>
+            <!-- default must be last one -->
+            <id2 id="*">default</id2>
+        </id1>
+        <!-- other must be last one, it is for the wrong panel -->
+        <id1 id="*">
+            <id2 id="*">other</id2>
+        </id1>
+    </panel_id>
+
+    <panel_stage stages="evt,dvt,pvt,default">
+
+        <!-- pwm: 3+18, bind_point max count:10, must sorted, the last one must be 4096 -->
+        <pwm_bind_points>
+            <!-- 10nit -->
+            <bind_point id="1" bin_id="1">481</bind_point>
+            <!-- 100nit -->
+            <bind_point id="2" bin_id="2">1869</bind_point>
+            <!-- sentinel value -->
+            <bind_point id="3" bin_id="3">4095</bind_point>
+        </pwm_bind_points>
+
+        <!-- dc1: 1+18, bind_point max count:10, must sorted, the last one must be 4096 -->
+        <dc1_bind_points>
+         </dc1_bind_points>
+
+        <!-- dc2: 1+1, bind_point max count:10, must sorted, the last one must be 4096 -->
+        <dc2_bind_points>
+        </dc2_bind_points>
+
+    </panel_stage>
+
+    <panel_stage stages="other,ebv,t0">
+
+        <!-- pwm: 3+18, bind_point max count:10, must sorted, the last one must be 4096 -->
+        <pwm_bind_points>
+            <!-- 10nit -->
+            <bind_point id="0" bin_id="0">480</bind_point>
+            <!-- 100nit -->
+            <bind_point id="1" bin_id="1">1869</bind_point>
+            <!-- sentinel value -->
+            <bind_point id="1" bin_id="2">4096</bind_point>
+        </pwm_bind_points>
+
+        <!-- dc1: 1+18, bind_point max count:10, must sorted, the last one must be 4096 -->
+        <dc1_bind_points>
+        </dc1_bind_points>
+
+        <!-- dc2: 1+1, bind_point max count:10, must sorted, the last one must be 4096 -->
+        <dc2_bind_points>
+        </dc2_bind_points>
+
+    </panel_stage>
+
+    <panel>
+        <item>
+            <fps>120</fps>
+            <dbv>2</dbv>
+            <rgb>101010</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>120</fps>
+            <dbv>2</dbv>
+            <rgb>202020</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>90</fps>
+            <dbv>2</dbv>
+            <rgb>101010</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>90</fps>
+            <dbv>2</dbv>
+            <rgb>202020</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>60</fps>
+            <dbv>2</dbv>
+            <rgb>101010</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>60</fps>
+            <dbv>2</dbv>
+            <rgb>202020</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>120</fps>
+            <dbv>169</dbv>
+            <rgb>101010</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>120</fps>
+            <dbv>169</dbv>
+            <rgb>202020</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>120</fps>
+            <dbv>1155</dbv>
+            <rgb>101010</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>120</fps>
+            <dbv>2</dbv>
+            <rgb>FAFAFA</rgb>
+            <blMode>0</blMode>
+        </item>
+    </panel>
+    <phone>
+        <item>
+            <fps>120</fps>
+            <dbv>3063</dbv>
+            <rgb>808080</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>120</fps>
+            <dbv>1319</dbv>
+            <rgb>FAFAFA</rgb>
+            <blMode>0</blMode>
+        </item>
+        <item>
+            <fps>120</fps>
+            <dbv>3063</dbv>
+            <rgb>FAFAFA</rgb>
+            <blMode>0</blMode>
+        </item>
+    </phone>
+</root>
